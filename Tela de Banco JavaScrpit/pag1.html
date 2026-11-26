@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagem/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Banco Grepe</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="topo">
+                <h1>Banco Grepe</h1>
+                <p>Olá, Bruno</p>
+            </div>
+            <div class="saldo-box">
+                <p>Saldo disponível</p>
+                <div class="saldo-linha">
+                    <p class="valor-saldo"><span id="saldo">3.550,90</span></p>
+                    <button type="button" id="btn-ocultar">Ocultar</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h2>Transferir</h2>
+            <form id="form" novalidate>
+                <label for="dest">Para quem</label>
+                <select id="dest" required>
+                    <option value="">Escolha um destinatário</option>
+                    <option value="marina">Marina Souza</option>
+                    <option value="carlos">Carlos Lima</option>
+                    <option value="padaria">Padaria do Bairro</option>
+                </select>
+                <label for="valor">Valor (R$)</label>
+                <input id="valor" type="text" inputmode="decimal" placeholder="0,00" required>
+                <button type="submit">Transferir</button>
+                <p id="msg"></p>
+            </form>
+        </section>
+
+        <section>
+            <h2>Extrato</h2>
+            <ul id="lista"></ul>
+        </section>
+    </main>
+    <footer>
+        <p>Projeto apenas para estudo com dados fictícios</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

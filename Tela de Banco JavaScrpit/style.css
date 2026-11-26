@@ -1,0 +1,226 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+:root {
+    --cor-fundo: #f3f1f6;
+    --cor-texto: #241530;
+    --cor-principal: #3b1f4a;
+    --largura-max: none;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: var(--largura-max);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topo p {
+    margin: 0;
+}
+
+header {
+    background-color: var(--cor-principal);
+    color: #fff;
+    padding: 24px 0;
+    border-bottom: 4px solid #7fe0b8;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.saldo-box {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: left;
+}
+
+.saldo-linha {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.saldo-box > p:first-child {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.valor-saldo {
+    margin: 4px 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+
+}
+
+#btn-ocultar {
+    background: transparent;
+    color: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 999px;
+    padding: 6px 16px;
+    cursor: pointer;
+}
+
+#btn-ocultar:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+main {
+    width: 100%;
+    max-width: var(--largura-max);
+    margin: 24px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 20px;
+}
+
+main section {
+    background-color: #fff;
+    border: 1px solid #e3dde9;
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+main h2 {
+    margin: 0 0 14px;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 720px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+}
+
+#lista {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#lista li {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #e3dde9;
+}
+
+#lista li:last-child {
+    border-bottom: 0;
+}
+
+.nome {
+    font-weight: 600;
+}
+
+.data {
+    font-size: 0.85rem;
+    color: #6f6479;
+}
+
+.valor {
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.entrada {
+    color: #1b7a55;
+}
+
+.saida {
+    color: #b3261e;
+}
+
+form label {
+    display: block;
+    margin-top: 12px;
+    font-size: 0.9rem;
+    color: #6f6479;
+}
+
+form select,
+form input {
+    width: 100%;
+    margin-top: 4px;
+    padding: 11px 12px;
+    font-size: 1rem;
+    border: 1px solid #e3dde9;
+    border-radius: 10px;
+}
+
+form button {
+    width: 100%;
+    margin-top: 18px;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 0;
+    border-radius: 10px;
+    background-color: #7fe0b8;
+    color: #12392b;
+    cursor: pointer;
+}
+
+form button:hover {
+    filter: brightness(0.95);
+}
+
+form select:focus-visible,
+form input:focus-visible,
+form button:focus-visible {
+    outline: 3px solid #7fe0b8;
+    outline-offset: 2px;
+}
+
+footer {
+    width: 100%;
+    max-width: var(--largura-max);
+    margin: auto auto 0;
+    padding: 0 20px 30px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #6f6479;
+}
+
+footer p {
+    margin: 0;
+}
+
+#msg {
+    min-height: 1.4em;
+    margin: 10px 0 0;
+    font-size: 0.92rem;
+}
+
+#msg.erro {
+    color: #b3261e;
+}
+
+#msg.sucesso {
+    color: #1b7a55;
+}
